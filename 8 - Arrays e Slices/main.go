@@ -32,8 +32,27 @@ func Slices() {
 
 }
 
+func Internos() {
+	// Arrays internos
+	slice := make([]float32, 10, 11)
+	fmt.Println(len(slice), cap(slice)) // len = 10, cap = 11
+	fmt.Println(slice)
+
+	slice = append(slice, 5)
+	slice = append(slice, 6)
+	fmt.Println(len(slice), cap(slice)) // len = 12, cap = 22
+	fmt.Println(slice)
+
+	slice2 := make([]float32, 5)
+	fmt.Println(len(slice2), cap(slice2)) // len = 5, cap = 5
+	fmt.Println(slice2)
+}
+
 func main() {
 	Array()
 	fmt.Println("-----")
 	Slices()
+	Array()
+	fmt.Println("-----")
+	Internos()
 }
